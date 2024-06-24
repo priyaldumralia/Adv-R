@@ -15,11 +15,11 @@ code-fold: true
 editor: visual
 ---
 
-## INTRODUCTION
+## Intoduction
 
 The **`mpg`** dataset, included in the **`ggplot2`** package, provides fuel economy data for various car models. It offers insights into factors influencing fuel efficiency. This analysis explores the relationship between engine displacement and highway miles per gallon (MPG).
 
-## DATA EXPLORATION
+## Data Exploration
 
 The **`mpg`** dataset comprises 234 observations and 11 features, including ***engine displacement (in liters), highway MPG, and car class.***
 
@@ -31,7 +31,7 @@ library(ggplot2)
 library(dplyr)
 ```
 
-## PLOT ANALYSIS
+## Plot Analysis
 
 Below is a scatter plot depicting the relationship between engine displacement and highway miles per gallon. Each point represents an observation in the dataset. The color of the points represent the class of the car.
 
@@ -48,6 +48,6 @@ ggplot(mpg, aes(x=displ, y=hwy, color=class)) +
 
 The scatter plot shows that cars with smaller engine displacements tend to have higher highway miles per gallon. This trend is consistent across different classes of card, although the exact relationship varies between classes.
 
-## CONCLUSION
+## Conclusion
 
 The analysis of the MPG dataset shows a clear inverse relationship between engine displacement and highway miles per gallon. Smaller engines tend to be more fuel-efficient on highways. This insight can help consumers make informed decisions about vehicle purchase based on fuel efficiency.
