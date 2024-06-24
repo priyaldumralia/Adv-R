@@ -1,0 +1,53 @@
+---
+title: "MPG Analysis"
+author: "Priyal Sanjay Dumralia 23200927"
+format: 
+  pdf:
+    toc: true
+    toc-title: '**Contents**'
+    grid:
+      body-width: 800px
+    embed-resources: true
+execute: 
+  eval: true
+  echo: false
+code-fold: true
+editor: visual
+---
+
+## INTRODUCTION
+
+The **`mpg`** dataset, included in the **`ggplot2`** package, provides fuel economy data for various car models. It offers insights into factors influencing fuel efficiency. This analysis explores the relationship between engine displacement and highway miles per gallon (MPG).
+
+## DATA EXPLORATION
+
+The **`mpg`** dataset comprises 234 observations and 11 features, including ***engine displacement (in liters), highway MPG, and car class.***
+
+[[*In this document, we will create a scatter plot to visualize the relationship between engine displacement and highway miles per gallon.*]{.underline}]{style="color: red"}
+
+```{r include=FALSE, warning=FALSE, message=FALSE}
+# Load necessary packages
+library(ggplot2)
+library(dplyr)
+```
+
+## PLOT ANALYSIS
+
+Below is a scatter plot depicting the relationship between engine displacement and highway miles per gallon. Each point represents an observation in the dataset. The color of the points represent the class of the car.
+
+```{r}
+# Create the plot
+ggplot(mpg, aes(x=displ, y=hwy, color=class)) +
+  geom_point() +
+  labs(title="Engine Displacement vs Highway Miles Per Gallon",
+       x="Engine Displacement (liters)",
+       y="Highway Miles Per Gallon") +
+  theme_minimal()
+
+```
+
+The scatter plot shows that cars with smaller engine displacements tend to have higher highway miles per gallon. This trend is consistent across different classes of card, although the exact relationship varies between classes.
+
+## CONCLUSION
+
+The analysis of the MPG dataset shows a clear inverse relationship between engine displacement and highway miles per gallon. Smaller engines tend to be more fuel-efficient on highways. This insight can help consumers make informed decisions about vehicle purchase based on fuel efficiency.
